@@ -2,13 +2,12 @@ type FilterOptions = {
   emptyList?: boolean;
   list?: string[];
   placeHolder?: string;
-  regex?: string;
-  replaceRegex?: string;
-  splitRegex?: string;
-  keepFirstCharacter?: boolean;
+  regex?: RegExp | string;
+  replaceRegex?: RegExp | string;
+  splitRegex?: RegExp | string;
 };
 
-class Filter {
+declare class Filter {
   constructor(options?: FilterOptions);
   isProfane(word: string): boolean;
   replaceWord(word: string): string;
