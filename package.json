@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "A javascript filter for bad words",
   "main": "./lib/badwords",
+  "types": "./types/badwords.d.ts",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha -R spec",
-    "docs": "./node_modules/.bin/documentation readme --section API ./lib/badwords.js"
+    "docs": "./node_modules/.bin/documentation readme --section API ./lib/badwords.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,8 @@
   "devDependencies": {
     "better-assert": "1.0.0",
     "documentation": "^5.3.3",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "typescript": "^5.1.6"
   },
   "author": "Mike P.",
   "license": "MIT",
